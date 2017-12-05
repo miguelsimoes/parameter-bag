@@ -1,0 +1,24 @@
+{
+    "name"   : "smsimoes/parameter-bag",
+    "description": "Generic Parameter Container based on Symfony ParameterBag",
+    "license": "GPL-3.0+",
+    "keywords": [],
+    "homepage": "https://github.com/miguelsimoes/parameter-bag",
+    "authors": [
+        {
+            "name": "Miguel Simões",
+            "email": "msimoes@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "MiguelSimoes\\Component\\ParameterBag\\": ""
+        },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    },
+    "require": {
+        "php": "^7.0"
+    }
+}

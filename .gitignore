@@ -1,0 +1,6 @@
+#
+# List of elements to be excluded from the repository
+/nbproject/*
+/vendor/*
+/composer.lock
+/phpunit.xml
