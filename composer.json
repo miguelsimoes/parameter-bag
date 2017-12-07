@@ -12,13 +12,24 @@
     ],
     "autoload": {
         "psr-4": {
-            "MiguelSimoes\\Component\\ParameterBag\\": ""
+            "MiguelSimoes\\Component\\ParameterBag\\": "src/"
         },
         "exclude-from-classmap": [
             "/Tests/"
         ]
     },
+    "autoload-dev": {
+        "psr-4": {
+            "MiguelSimoes\\Component\\ParameterBag\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
     "require": {
         "php": "^7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.0"
     }
 }

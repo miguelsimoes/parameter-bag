@@ -75,6 +75,26 @@ class ParameterBagTest extends TestCase
     }
 
     /**
+     * Tests whether the iterator is returned with the expected elements
+     */
+    public function testGetIterator()
+    {
+        $parameters = ['foo' => 'bar', 'bar' => 'foo'];
+        $container  = new ParameterBag($parameters);
+
+        $elements = 0;
+        foreach ($container as $parameter => $value) {
+            /* Cycle all the parameters to ensure we have all the expected ones */
+            ++$elements;
+
+            $this->assertEquals($parameters[$parameter], $value);
+        }
+        #
+        # We will also need to ensure that we have the number of elements matching the expected
+        $this->assertEquals(count($parameters), $elements);
+    }
+
+    /**
      * Tests whether the provided keys on the constructor are available to be
      * retrieved with the keys() method
      */
